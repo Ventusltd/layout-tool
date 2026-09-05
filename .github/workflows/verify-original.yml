@@ -1,0 +1,42 @@
+name: Verify original layout component baselines
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: layout-original-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: Ventusltd/globalgrid2050
+          ref: 4185020ade7da01869b4ffc0ee1d2656608da716
+          path: .origin
+          persist-credentials: false
+          sparse-checkout: |
+            solar-bess-topology-v7/module-layout
+            solar-bess-topology-v7/cable-geometry-visualiser
+            solar-bess-topology-v7/dc-ac-lv-topology-review
+          sparse-checkout-cone-mode: false
+      - name: Verify negative controls
+        run: python3 -B tools/test_verify.py
+      - name: Check exact original bytes and local dependencies
+        run: python3 -B tools/verify.py --source .origin --expected-origin 4185020ade7da01869b4ffc0ee1d2656608da716 --out artifacts/original-baseline.json
+      - name: Retain compact receipt
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: original-layout-${{ github.sha }}-${{ github.run_id }}
+          path: artifacts/original-baseline.json
+          if-no-files-found: error
+          retention-days: 30

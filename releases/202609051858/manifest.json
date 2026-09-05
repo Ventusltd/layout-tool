@@ -1,0 +1,179 @@
+{
+  "schema": "globalgrid.original-runtime.v1",
+  "generation": "202609051858",
+  "createdAt": "2026-09-05T18:58:44.090503+00:00",
+  "origin": {
+    "repository": "Ventusltd/globalgrid2050",
+    "commit": "4185020ade7da01869b4ffc0ee1d2656608da716"
+  },
+  "applications": [
+    {
+      "id": "module-layout",
+      "entry": "solar-bess-topology-v7/module-layout/index.html"
+    },
+    {
+      "id": "cable-geometry-visualiser",
+      "entry": "solar-bess-topology-v7/cable-geometry-visualiser/index.html"
+    },
+    {
+      "id": "dc-ac-lv-topology-review",
+      "entry": "solar-bess-topology-v7/dc-ac-lv-topology-review/index.html"
+    }
+  ],
+  "policy": "Original runtime and required relative data bytes copied unchanged; no generated full-code reports.",
+  "rootOriginDependencies": [
+    "/grid_substations.geojson",
+    "/dist/repd_master.json"
+  ],
+  "externalLiteralUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+    "https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js",
+    "https://electrical.theiet.org/bs-7671-18th-edition-wiring-regulations/",
+    "https://g81.ukpowernetworks.co.uk/library/installation/cables/ecs-02-0019-installation-of-underground-cables-lv-to-132kv",
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    "https://streetworks.org.uk/resources/publications/",
+    "https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.css",
+    "https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.js",
+    "https://www.gov.uk/government/publications/recording-of-underground-apparatus-in-streets-code-of-practice"
+  ],
+  "externalScope": "Literal URL inventory, not exhaustive dynamic dependency closure. External libraries, styles, tiles and geocoding remain external. Root-absolute data requires the GlobalGrid origin or an explicit hosting adapter.",
+  "files": [
+    {
+      "path": "solar-bess-topology-v7/cable-geometry-visualiser/calculations.js",
+      "bytes": 9630,
+      "sha256": "403d51c198148917075b1acfffa48c2af36b3219db21543074623917c30c7914",
+      "gitBlob": "9d111dd34dbaf67d1de0c1b67c096b8352a9b3a9",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/cable-geometry-visualiser/data.js",
+      "bytes": 30624,
+      "sha256": "be8b2f72f1ae1f9f9b09aff48ef2d6947c3b733cf43967e9b0a6ebdcc8995896",
+      "gitBlob": "f1d5051ef114f1be92a8f5e89c36785439ac6951",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/cable-geometry-visualiser/export.js",
+      "bytes": 1076,
+      "sha256": "220bb34f6acd51cc80b70e402b8df54a12679887ae0c104cfaea9a15c5846ab6",
+      "gitBlob": "f77c50db7c4971dda0b6ee0fcd26575d3aff9bdc",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/cable-geometry-visualiser/index.html",
+      "bytes": 19612,
+      "sha256": "835a257de5fd4d87fd1462ce2456362d37107e7f2f55640d62b30a6355914460",
+      "gitBlob": "69be2605eff0ff39e8791816040ec7a58b2013a1",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/cable-geometry-visualiser/rendering.js",
+      "bytes": 19398,
+      "sha256": "a4f479f7861276d55eb13880efc9d5f61cb98cbc778db6c58c010a120944fba2",
+      "gitBlob": "1c80b7609e9fcea4d3bbc81b09495a1d6fab356a",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/cable-geometry-visualiser/style.css",
+      "bytes": 19800,
+      "sha256": "a1c310031f168dde279f89cf4aef8d9cec24746f8a29c900adf23f53c0d6493c",
+      "gitBlob": "9c65eae53b227a21e17f3787f7f8ba837b8a03ac",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/cable-geometry-visualiser/ui.js",
+      "bytes": 21361,
+      "sha256": "a16edf3b0b52d98197e6db9f51850b8ba351a50dc72c204dc80b22b452652443",
+      "gitBlob": "8def8e5826475a6ae554ca203e8a16d2b015beb7",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/dc-ac-lv-topology-review/dc-ac-lv-topology-review-v5.css",
+      "bytes": 12791,
+      "sha256": "0511889d09ce61284636d9ff54cac1afb205d42c147eb4fe8e1966d90432077f",
+      "gitBlob": "942758c67142f6c492f29bb64e61f83e8ca0ac66",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/dc-ac-lv-topology-review/dc-ac-lv-topology-review-v5.js",
+      "bytes": 10593,
+      "sha256": "51268a64cb57b1bfa63552906456512136c9fc0b1e13f40f127beb3f43544f96",
+      "gitBlob": "f9d13da499112dc3838e98d3525fb0a22f9dd01f",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/dc-ac-lv-topology-review/gis-sld-v5.css",
+      "bytes": 9142,
+      "sha256": "6f353755a42de4d5a57881943dd7b565ee32a2fe79c10ededcc1429e354337ae",
+      "gitBlob": "f18caa16bd7dec48a0e6a26b2a2abcba89060840",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/dc-ac-lv-topology-review/index.html",
+      "bytes": 9944,
+      "sha256": "0f71dc665916d68e568fd5bdeb20148e40f3f28928909a355694a89912034b23",
+      "gitBlob": "83c44bb388568f5e4ae1b2b93eae482fc6187df4",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/dc-ac-lv-topology-review/module-layout-v5.css",
+      "bytes": 5460,
+      "sha256": "0d1907fc0f43cfb9393b011516525d65e91d5c4dd9dc75c3f2102b6ad669fd6d",
+      "gitBlob": "e68561428ff2fe11349c2901cf3ea837d6dd27d1",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/gis-sld-v5-config.js",
+      "bytes": 679,
+      "sha256": "fd486645f4dd1da5ab7273e8e7752799cd9de7e6fb1ff8d96707d8614df73955",
+      "gitBlob": "dc3c7d93d14ec943d39bd08675d7bc61afb72424",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/gis-sld-v5-helpers.js",
+      "bytes": 1804,
+      "sha256": "7a0895234b75b08d8530099601d462431f552bd56548ef5758c16761b02d958a",
+      "gitBlob": "e2c75947310f79482a976b058c119bff0b194d73",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/gis-sld-v5.css",
+      "bytes": 9142,
+      "sha256": "6f353755a42de4d5a57881943dd7b565ee32a2fe79c10ededcc1429e354337ae",
+      "gitBlob": "f18caa16bd7dec48a0e6a26b2a2abcba89060840",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/index.html",
+      "bytes": 4658,
+      "sha256": "e7efd4e87539565a7402e285595049077d8a0aa19106979ac92abd796afae1aa",
+      "gitBlob": "bd99a1a50fcb41a08c48d79748630969962dcf81",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/module-layout-v5.css",
+      "bytes": 15362,
+      "sha256": "de97b4c1cd4138a444944686c137dd369c104a2f0e9a28f4807d9ad6dc9592b7",
+      "gitBlob": "813895d3d958eac0af6b695f8af522c9b879e5b4",
+      "role": "runtime"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/module-layout-v5.js",
+      "bytes": 10483,
+      "sha256": "6a21e52a40a3db0fa9e655d92092c9c356a6b21605eef3f162449952d10d1fca",
+      "gitBlob": "e1cc939eee3c100d1f7692fabc223840ca56e58d",
+      "role": "runtime"
+    }
+  ],
+  "crossOwnerNavigation": [
+    {
+      "path": "solar-bess-topology-v7/gis-sld-financial-sandbox/index.html",
+      "repository": "Ventusltd/gis-sld-sandbox",
+      "commit": "9fe7b2d920aaa11e95380de39b33fd98f04e9696",
+      "entry": "releases/202609051855/solar-bess-topology-v7/gis-sld-financial-sandbox/index.html",
+      "manifestSha256": "90190a0846717b5203305a8c08301fb26ed58e015b992272e0999272091a0916",
+      "rule": "Consumer composes this separately owned sibling route; no GIS implementation copied into layout-tool."
+    }
+  ]
+}
