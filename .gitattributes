@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Immutable lifted originals retain their exact original bytes and line endings.
+releases/** -text
