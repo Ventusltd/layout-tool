@@ -110,7 +110,7 @@ def verify(repo):
                     script = Path(temp) / 'parse.js'; script.write_text(chunk, encoding='utf8')
                     result = subprocess.run(['node', '--check', str(script)], capture_output=True)
                     require(result.returncode == 0, 'JavaScript parse failure: ' + name); scripts += 1
-        return {'ok': True, 'generation': generation, 'baseline': baseline, 'files': len(listed), 'javascriptParses': scripts, 'relativeHtmlResources': resources, 'scope': 'Derived byte provenance, declared composition and syntax only; no browser or engineering acceptance.'}
+        return {'ok': True, 'generation': generation, 'manifestSha256': digest(raw_manifest), 'cartridgeSha256': digest(safe(repo, SOURCE).read_bytes()), 'baseline': baseline, 'files': len(listed), 'javascriptParses': scripts, 'relativeHtmlResources': resources, 'scope': 'Derived byte provenance, declared composition and syntax only; no browser or engineering acceptance.'}
     except (ValueError, KeyError, OSError, subprocess.CalledProcessError, TypeError) as error:
         errors.append(str(error))
         return {'ok': False, 'errors': errors}
