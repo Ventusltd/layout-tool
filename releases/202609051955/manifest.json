@@ -1,0 +1,98 @@
+{
+  "schema": "globalgrid.derived-runtime.v1",
+  "generation": "202609051955",
+  "createdAt": "2026-09-05T19:55:54.704724+00:00",
+  "baseline": {
+    "commit": "e201075e052bfc71e7fef01f1360f319808cb78f",
+    "generation": "202609051858",
+    "manifestSha256": "bb6d0a5cf4cf63d68b3d5cb02e55c27f1ccc0646135d7e39cdedbbe3da262796"
+  },
+  "applications": [
+    {
+      "id": "module-layout",
+      "entry": "solar-bess-topology-v7/module-layout/index.html"
+    }
+  ],
+  "files": [
+    {
+      "path": "solar-bess-topology-v7/module-layout/gis-sld-v5-config.js",
+      "bytes": 679,
+      "sha256": "fd486645f4dd1da5ab7273e8e7752799cd9de7e6fb1ff8d96707d8614df73955",
+      "role": "original"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/gis-sld-v5-helpers.js",
+      "bytes": 1804,
+      "sha256": "7a0895234b75b08d8530099601d462431f552bd56548ef5758c16761b02d958a",
+      "role": "original"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/gis-sld-v5.css",
+      "bytes": 9142,
+      "sha256": "6f353755a42de4d5a57881943dd7b565ee32a2fe79c10ededcc1429e354337ae",
+      "role": "original"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/index.html",
+      "bytes": 4702,
+      "sha256": "4895b5e3f0be24f9773857411c10049f9030b85cf4d15f1dc8a0ee79b4c5ee88",
+      "role": "composed-entry"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/module-layout-v5.css",
+      "bytes": 15362,
+      "sha256": "de97b4c1cd4138a444944686c137dd369c104a2f0e9a28f4807d9ad6dc9592b7",
+      "role": "original"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/module-layout-v5.js",
+      "bytes": 10483,
+      "sha256": "6a21e52a40a3db0fa9e655d92092c9c356a6b21605eef3f162449952d10d1fca",
+      "role": "original"
+    },
+    {
+      "path": "solar-bess-topology-v7/module-layout/draw-readiness.js",
+      "bytes": 1734,
+      "sha256": "cc843d982316ad6d43596123a27ffffb4ae98228ca3decd4ecfb74134d5ec845",
+      "role": "cartridge"
+    }
+  ],
+  "composition": {
+    "entry": "solar-bess-topology-v7/module-layout/index.html",
+    "insertBefore": "</body>",
+    "insertion": "<script src=\"./draw-readiness.js\"></script>\n"
+  },
+  "cartridge": {
+    "path": "solar-bess-topology-v7/module-layout/draw-readiness.js",
+    "sourcePath": "src/module-layout/draw-readiness.js"
+  },
+  "crossOwnerNavigation": [
+    {
+      "path": "solar-bess-topology-v7/dc-ac-lv-topology-review/index.html",
+      "repository": "Ventusltd/layout-tool",
+      "commit": "e201075e052bfc71e7fef01f1360f319808cb78f",
+      "release": "202609051858",
+      "manifestSha256": "bb6d0a5cf4cf63d68b3d5cb02e55c27f1ccc0646135d7e39cdedbbe3da262796"
+    },
+    {
+      "path": "solar-bess-topology-v7/cable-geometry-visualiser/index.html",
+      "repository": "Ventusltd/cable-trench-or-drill",
+      "commit": "76396fd3639dd86cddd21e392f29f43ab6d22f2d",
+      "release": "202609051921",
+      "manifestSha256": "a1b96236ba223bbbb8153538961bea677513a9fe3a877b9c61cd70d61128960e"
+    },
+    {
+      "path": "solar-bess-topology-v7/gis-sld-financial-sandbox/index.html",
+      "repository": "Ventusltd/gis-sld-sandbox",
+      "commit": "9fe7b2d920aaa11e95380de39b33fd98f04e9696",
+      "entry": "releases/202609051855/solar-bess-topology-v7/gis-sld-financial-sandbox/index.html",
+      "manifestSha256": "90190a0846717b5203305a8c08301fb26ed58e015b992272e0999272091a0916",
+      "rule": "Consumer composes this separately owned sibling route; no GIS implementation copied into layout-tool."
+    }
+  ],
+  "rootOriginDependencies": [
+    "/grid_substations.geojson",
+    "/dist/repd_master.json"
+  ],
+  "scope": "Original formulas and runtime files preserved. Only entry composition and independent draw-readiness guard are new. No engineering acceptance claim."
+}

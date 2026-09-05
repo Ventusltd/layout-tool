@@ -23,3 +23,10 @@ python -B tools/verify.py --source C:/Users/vikra/globalgrid-testcode-publicatio
 Five focused tests reject changed formulas, absent dependencies and malformed JavaScript, and require explicit pins for missing cross-owner navigation. The baseline verifies 18 byte-identical files, nine JavaScript parses and 22 relative HTML references, including two explicitly declared GIS links. CI checks the same pinned original revision and retains a compact receipt. These checks establish preservation, syntax and declared composition boundaries, not engineering or financial correctness.
 
 To import another immutable baseline, use `tools/import_original.py --source <checkout> --commit <full-SHA> --generation <new-UTC-stamp> --gis-producer-commit <full-GIS-SHA>`. Existing timestamp directories cannot be overwritten. The importer carries only runtime HTML, JavaScript and CSS, plus any actually referenced relative grid data; generated full-code reports are excluded.
+
+
+## Derived Module releases
+
+The original `latest.json` and release202609051858 remain unchanged. `derived-latest.json` separately identifies the derived Module-only release202609051955. Five original non-entry files remain exact baseline bytes; the original entry has one declared script insertion, loading `src/module-layout/draw-readiness.js` from its frozen release copy. This guard blocks Draw/Pick until the existing map source and four layers exist. It does not alter layout calculations or claim engineering validation.
+
+`tools/derive_module.py` composes a new timestamp without overwriting old releases. `tools/verify_derived.py` proves the original-file closure, exact entry insertion, maintained guard bytes and explicit sibling pins. The separate derived workflow runs alongside the original-baseline workflow. Runtime composition in GridAtlas requires a later, separately pinned Testcode release.
