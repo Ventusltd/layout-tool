@@ -1,0 +1,36 @@
+name: Verify derived Module cartridge provenance
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/module-layout/**'
+      - 'releases/**'
+      - 'derived-latest.json'
+      - 'tools/verify_derived.py'
+      - 'tools/test_verify_derived.py'
+      - '.github/workflows/verify-derived.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Exercise negative derived controls
+        run: python3 -B tools/test_verify_derived.py
+      - name: Verify pinned baseline, composition and cartridge
+        run: python3 -B tools/verify_derived.py --out artifacts/derived-runtime.json
+      - name: Retain compact provenance receipt
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: derived-layout-${{ github.sha }}-${{ github.run_id }}
+          path: artifacts/derived-runtime.json
+          if-no-files-found: error
+          retention-days: 30
